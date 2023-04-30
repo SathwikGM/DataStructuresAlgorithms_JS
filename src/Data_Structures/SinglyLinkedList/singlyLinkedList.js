@@ -156,4 +156,4 @@ class SinglyLinkedList {
   }
 }
 
-let list = new SinglyLinkedList();
+const list = new SinglyLinkedList();
