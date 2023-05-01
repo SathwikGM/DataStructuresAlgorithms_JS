@@ -12,6 +12,7 @@ class Stack {
     this.length = 0;
   }
 
+  // LIFO order
   // adding at beginning of stack
   push(value) {
     let newNode = new Node(value);
@@ -26,7 +27,7 @@ class Stack {
     }
     return this.length++;
   }
-  //  removing at end of stack
+  //  removing at begining of stack
   pop() {
     if (this.length === 0) return null;
     let removenode = this.first
