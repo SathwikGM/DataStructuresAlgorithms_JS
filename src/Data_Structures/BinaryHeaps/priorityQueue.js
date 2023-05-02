@@ -35,17 +35,18 @@ class PriorityQueue {
           if (leftChild.priority > element.priority) {
             swap = leftChildIndex;
           }
-          if (rightChildIndex < length) {
-            rightChild = this.values[rightChildIndex];
-            if ((swap === null && rightChild.priority > element.priority) || (swap !== null && rightChild.priority > leftChild.priority)) {
-              swap = rightChildIndex;
-            }
-          }
-          if (swap === null) break;
-          this.values[index] = this.values[swap];
-          this.values[swap] = element;
-          index = swap;
+
         }
+        if (rightChildIndex < length) {
+          rightChild = this.values[rightChildIndex];
+          if ((swap === null && rightChild.priority > element.priority) || (swap !== null && rightChild.priority > leftChild.priority)) {
+            swap = rightChildIndex;
+          }
+        }
+        if (swap === null) break;
+        this.values[index] = this.values[swap];
+        this.values[swap] = element;
+        index = swap;
       }
     }
     return max;
